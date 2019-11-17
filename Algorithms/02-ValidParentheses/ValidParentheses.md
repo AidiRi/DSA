@@ -28,3 +28,37 @@ Example 3:
 Input: "(]"
 Output: false
 ```
+
+### Solution:
+
+```js
+const validParentheses = str => {
+
+  if (str.length === 0) {
+    return true
+  }
+
+  let parensHash = {
+      ")" : "(",
+      "]" : "[",
+      "}" : "{",
+  };
+
+  let inventory = [];
+
+  for (let parens of str){
+    if ( parensHash[parens] ){
+      let lastParens = inventory.pop();
+      if ( parensHash[parens] !== lastParens ){
+        return false;
+      }
+    }
+    else {
+      inventory.push(parens)
+    }
+  }
+
+  return (inventory.length === 0 ? true : false);
+
+}
+```

@@ -7,31 +7,35 @@ Open brackets must be closed by the same type of brackets. Open brackets must be
 */
 
 const validParentheses = str => {
-  str.length == 0 ? true : null;
-  parensHash = {
+
+  if (str.length === 0) {
+    return true
+  }
+
+  let parensHash = {
       ")" : "(",
       "]" : "[",
       "}" : "{",
   };
-  inventory = [];
+
+  let inventory = [];
+
   for (let parens of str){
-    // console.log("parensHash[parens]", parensHash[parens])
-    console.log("parens", parens)
-    console.log("inventory", inventory)
     if ( parensHash[parens] ){
       let lastParens = inventory.pop();
-      console.log("last parens", lastParens);
-
       if ( parensHash[parens] !== lastParens ){
         return false;
       }
-
     }
     else {
       inventory.push(parens)
     }
   }
-  inventory.length == 0 ? true: false;
+
+  return (inventory.length === 0 ? true : false);
+
 }
 
-console.log(validParentheses( "({[]}" ))
+
+
+console.log(validParentheses( "({[()]}" ))
