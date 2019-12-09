@@ -28,11 +28,12 @@ Example 3:
 Input: "(]"
 Output: false
 ```
+Resource: [LeetCode](https://leetcode.com/problems/valid-parentheses/)
 
 ### Solution:
 
 ```js
-const validParentheses = str => {
+const validParentheses = (str) => {
 
   if (str.length === 0) {
     return true

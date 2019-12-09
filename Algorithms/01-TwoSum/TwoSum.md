@@ -15,7 +15,9 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 ```
 
-### Solution
+Resource: [LeetCode](https://leetcode.com/problems/two-sum/)
+
+### My Solution
 
 ```js
 const twoSum = (arr, target) => {
@@ -39,6 +41,3 @@ const twoSum = (arr, target) => {
   }
 }
 ```
-
-
-Resource: [LeetCode](https://leetcode.com/problems/two-sum/)
