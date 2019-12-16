@@ -1,3 +1,9 @@
+/*
+Given a sentence output the words in reverse order
+ input: "this is a test string"
+ output: "string test a is this"
+*/
+
 const reversWords = (string) => {
   let splitArray = string.split(" ");
   let returnArray = [];

@@ -2,7 +2,7 @@
 
 ### Problem:
 
-Given a single string of words, determine whether it is a palindrome.
+Given a string of a single lower cased word, determine whether it is a palindrome.
 
 **Example 1:**
 ```
