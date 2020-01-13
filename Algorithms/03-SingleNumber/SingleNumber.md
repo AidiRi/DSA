@@ -27,13 +27,15 @@ Resource: [LeetCode](https://leetcode.com/problems/single-number/description/)
 
 ```js
 const singleNumber = (arr) => {
-
+  //Conditional for edge cases that input an array with only one integer
   if ( arr.length === 1 ){
     return arr[0]
   }
-
+  //First sorting the array from smallest to largest, which will group number pairs together
   let sortedArr = arr.sort((a,b) => a - b);
+  //Iterating through the array, 2 at a time...
   for (let i = 0; i < sortedArr.length ; i+=2) {
+    //compares each second num with num next to it, if they don't match, the first num will always be the single num and will be returned.
     if ( sortedArr[i] !== sortedArr[i + 1] ){
       return sortedArr[i];
     }
